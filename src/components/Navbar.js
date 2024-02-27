@@ -21,10 +21,15 @@ const Navbar = () => {
   const isDark = theme === 'dark'
 
   return (
-    <div className='flex justify-between items-center'>
-        <p className='font-extrabold font-montserrat text-4xl dark:text-white'>Voixtype</p>
-        <button onClick={switchTheme} className='dark:text-white text-black transition duration-300 delay-150'>{isDark ? <BsSunFill className='text-2xl animate-pulse' /> : <MdDarkMode className='text-2xl' />}</button>
-    </div>
+    <>
+        <div className='pt-4 px-6 lg:px-20'>
+            <div className='flex justify-between items-center'>
+                <p className='font-extrabold font-montserrat text-4xl dark:text-white'>Voix<span className='text-yellow-400'>type</span></p>
+                <button onClick={switchTheme} className='dark:text-white text-black transition duration-300 delay-150'>{isDark ? <BsSunFill className='text-2xl animate-pulse' /> : <MdDarkMode className='text-2xl' />}</button>
+            </div>
+        </div>
+    </>
+  
   )
 }
 
